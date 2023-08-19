@@ -10,5 +10,19 @@ function writePassword() {
 
 }
 
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 10);
+}
+
+function generateRandomLetter() {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+  return alphabet[Math.floor(Math.random() * alphabet.length)]
+}
+
+function generateRandomSpecialChar() {
+  const specialChar = " !#$%&'()*+,-./:;<=>?@[\ ]^_`{|}~\""
+  return specialChar[Math.floor(Math.random() * specialChar.length)]
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
