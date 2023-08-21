@@ -10,6 +10,7 @@ function generatePassword() {
   let passwordChars = "";
   // Prompts- each add specified characters when called upon
   let passLengthPrompt = prompt("Enter password length between 8-128 characters");
+//  if pass length is not within parameters, an error message will appear and null function
   if (passLengthPrompt < 8 || passLengthPrompt > 128) {
     alert("ERROR - Length must be between 8 and 128 characters");
     return null;
@@ -30,6 +31,7 @@ function generatePassword() {
   if (specialCharPrompt === 'y') {
     passwordChars += specialChar;
   }
+  // if n is answer for all character types, an error message will appear and null function
   if (lowerCasePrompt === 'n' && upperCasePrompt === 'n' && numberPrompt === 'n' && specialCharPrompt === 'n') {
     alert('ERROR - Must include at least one character type');
     return null;
