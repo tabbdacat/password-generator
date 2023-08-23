@@ -1,20 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-const specialChar = "!#$%&'()*+,-./:;<=>?@[\ ]^_`{|}~\"";
+// strings used for each character type
+const specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 
 function generatePassword() {
+  // start with no characters included in string
   let passwordChars = "";
-  // Prompts- each add specified characters when called upon
+  // Prompt- to add specified length of password
   let passLengthPrompt = prompt("Enter password length between 8-128 characters");
 //  if pass length is not within parameters, an error message will appear and null function
   if (passLengthPrompt < 8 || passLengthPrompt > 128) {
     alert("ERROR - Length must be between 8 and 128 characters");
     return null;
   }
+// Prompts- each add specified characters string to passwordChars when called upon
   let lowerCasePrompt = prompt("Include lower case letters? Respond y for yes and n for no.");
   if (lowerCasePrompt === 'y') {
     passwordChars += lowerCase;
@@ -37,9 +40,10 @@ function generatePassword() {
     return null;
   }
 
+  // start with blank password
 let generatedPassword = "";
   
-// for loop determines each spot for string length
+// for loop uses password length from prompt for each spot for string length
 for (let i = 0; i < passLengthPrompt; i++) {
 // randomizes 1 character within specified char types
 generatedPassword += passwordChars[Math.floor(Math.random() * passwordChars.length)];
