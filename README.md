@@ -2,7 +2,7 @@
 
 ## Description
 
-This application was developed to generate a randomized password which can be customized to include multiple characters as specified and customized to a certain character length as directed. Once you click the "Generate Password" button, a series of prompts will generate. After the prompts are answered with the criteria you wish to include in your password, a password will display in the text box.
+This application was developed to generate a randomized password which can be customized to include specific character types as well as a certain character length. Once you click the "Generate Password" button, a series of prompts will generate. After the prompts are answered with the criteria you wish to include in your password, a password will display in the text box.
 
 The application is made to be easy to use and interactive, with box sizes and display adjustable to screen size. JavaScript best practices for file structure and naming conventions were followed. 
 
